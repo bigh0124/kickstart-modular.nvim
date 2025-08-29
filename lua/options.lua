@@ -71,4 +71,14 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- ============================================
+-- 縮進設置 - 統一設置為 2 個空格
+-- ============================================
+vim.o.tabstop = 2          -- Tab 字符顯示為 2 個空格寬度
+vim.o.softtabstop = 2      -- 按 Tab 鍵時插入的空格數
+vim.o.shiftwidth = 2       -- 自動縮進時使用的空格數
+vim.o.expandtab = true     -- 用空格替換 Tab 字符
+vim.o.smartindent = true   -- 智能縮進
+vim.o.autoindent = true    -- 自動縮進
+
 -- vim: ts=2 sts=2 sw=2 et

@@ -31,11 +31,40 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      
+        javascript = { 'prettierd', 'prettier' },
+        typescript = { 'prettierd', 'prettier' },
+        javascriptreact = { 'prettierd', 'prettier' },
+        typescriptreact = { 'prettierd', 'prettier' },
+     
+        rust = { 'rustfmt' },
+      
+        json = { 'prettierd', 'prettier' },
+        css = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
+        markdown = { 'prettierd', 'prettier' },
+      },
+      formatters = {
+        prettier = {
+          prepend_args = {
+            '--tab-width', '2',
+            '--use-tabs', 'false',
+            '--semi', 'true',
+            '--single-quote', 'false',
+            '--trailing-comma', 'es5',
+            '--print-width', '120',
+          },
+        },
+        prettierd = {
+          prepend_args = {
+            '--tab-width', '2',
+            '--use-tabs', 'false',
+            '--semi', 'true',
+            '--single-quote', 'false',
+            '--trailing-comma', 'es5',
+            '--print-width', '120',
+          },
+        },     
       },
     },
   },
